@@ -824,12 +824,14 @@
     const showCart = document.getElementById('showCart')
     const cart = document.querySelector(".header__card-wrap")
     const seeCart = document.getElementById('header__cart-view-cart')
+    // const list = document.querySelector('.header__cart-list')
     cart.addEventListener('click', function(){
         showProduct.style.display = 'none'
         showCart.style.display = 'flex'
     })
     seeCart.addEventListener('click', function(){
         showProduct.style.display = 'none'
+        // list.style.display = 'none'
         showCart.style.display = 'flex'
     })
 
