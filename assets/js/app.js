@@ -1,6 +1,8 @@
 
     ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
                                                         // FORM REGISTER//
+
+
     //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// 
     const registerbutton = document.querySelector('.header__navbar-list:last-child .header__navbar-item:nth-child(3)')
 
@@ -335,6 +337,7 @@
         },
         "sold":'99',
         "brand":'GuGi',
+        "color":"yellow",
         "price-old":"1.200.000 đ",
         "country":"Japan",
         "sale-off-percent":"43%",
@@ -354,6 +357,7 @@
         },
         "sold":'99',
         "brand":'GuGi',
+        "color":"yellow",
         "price-old":"1.200.000 đ",
         "country":"Japan",
         "sale-off-percent":"43%",
@@ -373,6 +377,7 @@
         },
         "sold":'99',
         "brand":'GuGi',
+        "color":"yellow",
         "price-old":"1.200.000 đ",
         "country":"Japan",
         "sale-off-percent":"43%",
@@ -392,6 +397,7 @@
         },
         "sold":'99',
         "brand":'GuGi',
+        "color":"yellow",
         "price-old":"1.200.000 đ",
         "country":"Japan",
         "sale-off-percent":"43%",
@@ -411,6 +417,7 @@
         },
         "sold":'99',
         "brand":'GuGi',
+        "color":"yellow",
         "price-old":"1.200.000 đ",
         "country":"Japan",
         "sale-off-percent":"43%",
@@ -430,6 +437,7 @@
         },
         "sold":'99',
         "brand":'GuGi',
+        "color":"yellow",
         "price-old":"1.200.000 đ",
         "country":"Japan",
         "sale-off-percent":"43%",
@@ -449,6 +457,7 @@
         },
         "sold":'99',
         "brand":'GuGi',
+        "color":"yellow",
         "price-old":"1.200.000 đ",
         "country":"Japan",
         "sale-off-percent":"43%",
@@ -468,6 +477,7 @@
         },
         "sold":'99',
         "brand":'GuGi',
+        "color":"yellow",
         "price-old":"1.200.000 đ",
         "country":"Japan",
         "sale-off-percent":"43%",
@@ -487,6 +497,7 @@
         },
         "sold":'99',
         "brand":'GuGi',
+        "color":"yellow",
         "price-old":"1.200.000 đ",
         "country":"Japan",
         "sale-off-percent":"43%",
@@ -506,6 +517,7 @@
         },
         "sold":'99',
         "brand":'GuGi',
+        "color":"yellow",
         "price-old":"1.200.000 đ",
         "country":"Japan",
         "sale-off-percent":"43%",
@@ -525,6 +537,7 @@
         },
         "sold":'99',
         "brand":'GuGi',
+        "color":"yellow",
         "price-old":"1.200.000 đ",
         "country":"Japan",
         "sale-off-percent":"43%",
@@ -544,6 +557,7 @@
         },
         "sold":'99',
         "brand":'GuGi',
+        "color":"yellow",
         "price-old":"1.200.000 đ",
         "country":"Japan",
         "sale-off-percent":"43%",
@@ -563,6 +577,7 @@
         },
         "sold":'99',
         "brand":'GuGi',
+        "color":"yellow",
         "price-old":"1.200.000 đ",
         "country":"Japan",
         "sale-off-percent":"43%",
@@ -582,6 +597,7 @@
         },
         "sold":'99',
         "brand":'GuGi',
+        "color":"yellow",
         "price-old":"1.200.000 đ",
         "country":"Japan",
         "sale-off-percent":"43%",
@@ -601,6 +617,7 @@
         },
         "sold":'99',
         "brand":'GuGi',
+        "color":"yellow",
         "price-old":"1.200.000 đ",
         "country":"Japan",
         "sale-off-percent":"43%",
@@ -620,6 +637,7 @@
         },
         "sold":'99',
         "brand":'GuGi',
+        "color":"yellow",
         "price-old":"1.200.000 đ",
         "country":"Japan",
         "sale-off-percent":"43%",
@@ -639,6 +657,7 @@
         },
         "sold":'99',
         "brand":'GuGi',
+        "color":"yellow",
         "price-old":"1.200.000 đ",
         "country":"Japan",
         "sale-off-percent":"43%",
@@ -658,6 +677,7 @@
         },
         "sold":'99',
         "brand":'GuGi',
+        "color":"yellow",
         "price-old":"1.200.000 đ",
         "country":"Japan",
         "sale-off-percent":"43%",
@@ -677,6 +697,7 @@
         },
         "sold":'99',
         "brand":'GuGi',
+        "color":"yellow",
         "price-old":"1.200.000 đ",
         "country":"Japan",
         "sale-off-percent":"43%",
@@ -696,6 +717,7 @@
         },
         "sold":'99',
         "brand":'GuGi',
+        "color":"yellow",
         "price-old":"1.200.000 đ",
         "country":"Japan",
         "sale-off-percent":"43%",
@@ -719,11 +741,11 @@
             div.innerHTML = `
                     
                 <a class="home-product-item" href="#">
-                    <div class="home-product-item__img"><img class="home-product-img__img" src=${data.image}></img></div>
-                    <h4 class="home-product-item__name"><span class="home-product-item__name-name">${data.title}</span></h4>
+                    <div class="home-product-item__img"><img class="home-product-img__img" id="image" src=${data.image}></img></div>
+                    <h4 class="home-product-item__name"><span class="home-product-item__name-name" id="title">${data.title}</span></h4>
                     <div class="home-product-item__price">
                         <span class="home-product-item__price-old">${data["price-old"]}</span>
-                        <span class="home-product-item__price-current">${data.price}</span>
+                        <span class="home-product-item__price-current" id="price">${data.price}</span>
                     </div>
                     <div class="home-product-item__action">
                         <span class="home-product-item__like home-product-item__like--liked">
@@ -737,11 +759,12 @@
                             <i class="home-product-item__star--gold fas fa-star"></i>
                             <i class="fas fa-star"></i>
                         </div>
-                        <span class="home-product-item__sold">${data.sold}</span>
+                        <span class="home-product-item__sold">${data.sold} đã bán</span>
                     </div>
                     <div class="home-product-item__origin">
-                        <span class="home-product-item__brand">${data.brand}</span>
+                        <span class="home-product-item__brand" id="brand">${data.brand}</span>
                         <span class="home-product-item__origin-name">${data.country}</span>
+                        <span class="home-product-item__origin-color" id="color">${data.color}</span>
                     </div>
                     <div class="home-product-item__favourite">
                         <i class="fas fa-check"></i>
@@ -811,6 +834,7 @@
     const heartFill = document.querySelectorAll('.home-product-item__like-icon-fill.fas.fa-heart')
     heartFill.forEach((heart)=>{
         heart.addEventListener('click', ()=>{
+
             heart.classList.toggle('home-product-item__like-icon-fill')
             // const heartEmpty = document.querySelectorAll('.home-product-item__like-icon-empty.far.fa-heart')
         })
@@ -849,6 +873,7 @@
     const price = document.querySelector('.cart__information-price')
     const buttonCart = document.getElementById('cart__information-button-link')
     const modalStatus = document.querySelector('.status__modal-product')
+    const brand = document.querySelector('.home-product-item__origin')
     products.forEach((product, index)=>{
         product.addEventListener('click', function(){
             modalCart.style.display = 'block'
@@ -856,21 +881,24 @@
             boxImg.src = products[currentIndex].querySelector('.home-product-img__img').src
             heading.textContent = products[currentIndex].querySelector('.home-product-item__name-name').textContent
             price.textContent = products[currentIndex].querySelector('.home-product-item__price-current').textContent
+            brand.textContent = products[currentIndex].querySelector('.home-product-item__origin-name').textContent
             dataProduct.forEach(data=>{
                 descr.textContent = data.description
-                // console.log(data.description)
+
             })
 
-
         })
+
     })
+
     buttonCart.addEventListener('click', ()=>{
         modalStatus.style.display = 'flex'
-        
+
         setTimeout(()=>{
             modalStatus.style.display = 'none'
         },2000)
     })
+
     closeX.addEventListener('click', ()=>{
         modalCart.style.display = 'none'
     })
@@ -879,32 +907,113 @@
     ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
     const buyList = document.querySelector('.cart__buy-list')
-    dataProduct.forEach((data)=>{
+    // dataProduct.forEach((data)=>{
+    //     const li = document.createElement('li')
+    //     li.setAttribute('class', 'cart__buy-item')
+        
+    //     li.innerHTML = `
+            
+    //             <div class="cart__buy-box">
+    //                 <div class="cart__buy-image">
+    //                     <img class="cart__buy-img" id="image" src=${data.image} alt="ErrorImage" />
+    //                 </div>
+    //                 <div class="cart__buy-description">
+    //                     <span class="cart__buy-dsc-span" id="title">name: ${data.title}</span>
+    //                     <span class="cart__buy-dsc-span" id="color">color: ${data.color}</span>
+    //                     <span class="cart__buy-dsc-span" id="brand">Brand: ${data.brand}</span>
+    //                 </div>
+    //                 <div class='cart__buy-price' id="price">${data.price}</div>
+    //             </div>
+    //             <div class="cart__buy-button">
+    //                 <button class="cart__buy-button-btn">-</button>
+    //                 <input type="text" class="cart__buy-input"/>
+    //                 <button class="cart__buy-button-btn">+</button>
+    //                 <button class="cart__buy-button-btn"><i class='cart__buy-button-icon far fa-heart'></i></button>
+    //                 <button class="cart__buy-button-btn"><i class='cart__buy-button-icon fa-solid fa-trash-can'></i></button>
+    //             </div>
+           
+    //     `
+    //     buyList.appendChild(li)
+
+    // })
+
+    ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+                                                            // CRUD DATA //
+    ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+    
+    var formData = readData()
+    insertData(formData)
+    saveData(formData)
+    function readData(){
+        const formData = {}
+        formData["title"] = document.querySelector("#title").textContent
+        formData["price"] = document.querySelector("#price").textContent
+        formData["brand"] = document.querySelector("#brand").textContent
+        // formData["color"] = document.querySelector("#color").textContent
+        // <span class="cart__buy-dsc-span" >Color:${data.color}</span>
+        formData["image"] = document.querySelector("#image").src
+        return formData
+    }
+    // bug chưa render được img, name, price, brand
+    
+    // insert
+    function insertData(data){
         const li = document.createElement('li')
         li.setAttribute('class', 'cart__buy-item')
-        
-        li.innerHTML = `
-            
-                <div class="cart__buy-box">
-                    <div class="cart__buy-image">
-                        <img class="cart__buy-img" src=${data.image} alt="ErrorImage" />
-                    </div>
-                    <div class="cart__buy-description">
-                        <span class="cart__buy-dsc-span">name: ${data.title}</span>
-                        <span class="cart__buy-dsc-span">color:</span>
-                        <span class="cart__buy-dsc-span">Brand: ${data.brand}</span>
-                    </div>
-                    <div class='cart__buy-price'>${data.price}</div>
+        li.innerHTML += `
+            <div class="cart__buy-box">
+                <div class="cart__buy-image">
+                    <img class="cart__buy-img" src=${data.image} alt="ErrorImage" />
                 </div>
-                <div class="cart__buy-button">
-                    <button class="cart__buy-button-btn">-</button>
-                    <input type="text" class="cart__buy-input"/>
-                    <button class="cart__buy-button-btn">+</button>
-                    <button class="cart__buy-button-btn"><i class='cart__buy-button-icon far fa-heart'></i></button>
-                    <button class="cart__buy-button-btn"><i class='cart__buy-button-icon fa-solid fa-trash-can'></i></button>
+                <div class="cart__buy-description">
+                    <span class="cart__buy-dsc-span" >Name:${data.title} </span>
+                    <span class="cart__buy-dsc-span" >Brand:${data.brand}</span>
                 </div>
-           
-        `
-        buyList.appendChild(li)
+                <div class='cart__buy-price'>${data.price}</div>
+            </div>
+            <div class="cart__buy-button">
+                <button class="cart__buy-button-btn">-</button>
+                <input type="text" class="cart__buy-input"/>
+                <button class="cart__buy-button-btn">+</button>
+                <button class="cart__buy-button-btn"><i class='cart__buy-button-icon far fa-heart'></i></button>
+                <button class="cart__buy-button-btn" onclick ="deleteData(this)"><i class='cart__buy-button-icon fa-solid fa-trash-can' ></i></button>
+            </div>
 
-    })
+        `
+
+        buyList.appendChild(li)
+    }
+    buttonCart.addEventListener('click',insertData)
+    buttonCart.addEventListener('click',saveData())
+    // delete
+    function deleteData(){
+        document.querySelector('.cart__buy-item').remove()
+    }
+
+    // save
+    // bug chưa save được xem lại
+    function saveData(){
+        let itemList = document.querySelectorAll('.cart__buy-item')
+        let itemStorage = []
+        itemList.forEach((item)=>{
+            let title = document.querySelector("#title").textContent
+            let price = document.querySelector("#price").textContent
+            let brand = document.querySelector("#brand").textContent
+            let image = document.querySelector("#image").textContent
+            itemStorage.push({
+                title,
+                price,
+                brand,
+                image
+            })
+            
+        })
+        localStorage.setItem('itemList', JSON.stringify(itemStorage))
+        console.log(itemStorage)
+
+        // key :value
+    }
+    
+
+    
