@@ -233,6 +233,22 @@
         margin: auto;
         display: flex;
     }
+    .cart__box{
+        /* display: block; */
+    }
+    .modal__body-cart {
+        
+        padding: 0 20px;
+    }
+    .cart__information-description {
+    margin: 20px 0 10px 0;
+    padding: 10px 0;
+    font-size: 1.6rem;
+    /* height: 3.2rem; */
+    line-height: 1.6rem;
+    word-break: break-word;
+    overflow: hidden;
+    }
     
     @keyframes mobileSearchSideIn {
         from{
