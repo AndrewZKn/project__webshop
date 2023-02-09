@@ -237,19 +237,46 @@
         /* display: block; */
     }
     .modal__body-cart {
-        
         padding: 0 20px;
     }
+    /*  */
+
+
     .cart__information-description {
     margin: 20px 0 10px 0;
     padding: 10px 0;
-    font-size: 1.6rem;
+    font-size: 1.3rem;
     /* height: 3.2rem; */
     line-height: 1.6rem;
     word-break: break-word;
     overflow: hidden;
     }
+    .cart__information-heading{
+        font-size: 1.4rem;
+    }
+    .cart__information-rating{
+        font-size: 1.2rem;
+    }
+    .cart__information-button-link{
+        display: flex;
+        margin: auto;
+        padding: 10px 25px;
+    }
+    /*  */
+    .header__navbar-user-menu{
+        display: block;
+        position: relative;
+    }
+
     
+    .cart__box-span{
+        margin: 2px;
+        padding: 6px;
+
+    }
+    .cart__box-color{
+        display: none;
+    }
     @keyframes mobileSearchSideIn {
         from{
             opacity: 0;
