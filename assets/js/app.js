@@ -315,6 +315,24 @@
         })
     }
     init()
+    ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+                                                            // CLICK SHOW NAVBAR MORE MOBILE + TABLET//
+    ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+    
+
+    function myFunction(){
+
+        // const buttonBar = document.querySelector('.header__navbar-mobile-icon')
+        const navbar = document.querySelector('.header__navbar-mobile-list')
+        if(navbar.style.display == 'none'){
+            navbar.style.display ='block'
+        }
+        else{
+            navbar.style.display ='none'
+
+        }
+    }
+    myFunction()
    
 
 

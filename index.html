@@ -28,7 +28,7 @@
             <div class="grid wide">
                 <nav class="header__navbar hide-on-mobile-tablet">
                     <ul class="header__navbar-list">
-                        <li class="header__navbar-item header__navbar-item--has-qr header__navbar-item--separate">Vào cửa hàng trên ứng dụng 
+                        <li class="header__navbar-item header__navbar-item--has-qr header__navbar-item--separate">WEBSHOP
                             <!--  header-qr-code -->
                             <div class="header__qr">
                                 <img src="https://ik.imagekit.io/fyhbxzra7/QR_code.png?ik-sdk-version=javascript-1.4.3&updatedAt=1675778624256" alt="QR code" class="header__qr-img">
@@ -125,9 +125,19 @@
                 </nav>
                 <!-- header with search -->
                 <div class="header-with-search">
-                    <label for="mobile-search-checkbox" class="header__mobile-search">
-                        <i class="header__mobile-search-icon fas fa-search"></i>
-                    </label>
+                    <nav class="header__navbar-mobile">
+                        <button class="header__navbar-mobile-icon"  onclick="myFunction()" >
+                            <i class="header__navbar-mobile-baricon fa-solid fa-bars"></i>
+                        </button>
+                        <label for="mobile-search-checkbox" class="header__mobile-search">
+                            <i class="header__mobile-search-icon fas fa-search"></i>
+                            
+                        </label>
+    
+                        
+                    </nav>
+                    
+                    
                     <div class="header__logo hide-on-tablet">
                         <a href="/" class="header__logo-link">
                             <img class="header__logo-img" src="https://ik.imagekit.io/fyhbxzra7/App_Store.png?ik-sdk-version=javascript-1.4.3&updatedAt=1675778623716" alt="ErrorImage">
@@ -178,6 +188,8 @@
                         </div>
                     </div>
 
+                    <!-- more bar -->
+                    
                     <!-- cart layout -->
                     <div class="header__cart">
                         <div class="header__card-wrap">
@@ -222,9 +234,16 @@
                             </div> 
                             
                         </div>
+
                         
                     </div>
+                    
+
                 </div>
+                
+
+                
+                
             </div>
             <!-- sort bar -->
             <ul class="header__sort-bar">
@@ -245,6 +264,30 @@
                     
                 </li>
             </ul>
+            <!-- navbar mobile + table -->
+            <ul class="header__navbar-mobile-list">
+    
+                <li class="header__navbar-mobile-item header__navbar-mobile-item--has-notify">
+                    <a href="#" class="header__navbar-mobile-item-link">
+                    Thông báo</a>
+                </li>
+                <li class="header__navbar-mobile-item">
+                    <a href="#" class="header__navbar-mobile-item-link">
+                    Trợ giúp</a>
+                </li>
+                <li class="header__navbar-mobile-item ">
+                        <a href="#" class="header__navbar-mobile-item-link">Đăng kí</a>
+                </li>
+                <li class="header__navbar-mobile-item ">
+                        <a href="#" class="header__navbar-mobile-item-link">Đăng Nhập</a>
+                </li>
+                <li class="header__navbar-mobile-item header__navbar-mobile-item-user ">
+                    <span class="header__navbar-mobile-user-name">Vỹ Nguyễn</span>
+                    
+                </li>
+            </ul>
+            
+           
             
         </header>
 

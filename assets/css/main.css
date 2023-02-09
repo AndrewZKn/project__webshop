@@ -78,6 +78,9 @@
 .header__navbar-user-item{
 
 }
+.header__navbar-mobile-list{
+    display: none;
+}
 .header__navbar-user-item a{
     text-decoration: none;
     color: var(--text--color);
@@ -149,7 +152,7 @@
 .header__navbar-icon-link:nth-child(2){
     margin-left:3px ;
 }
-.hearder__navbar-icon{
+.header__navbar-icon{
     font-size: 1.8rem;
     margin: 0 4px;
 }
@@ -1621,4 +1624,15 @@ i.home-product-item__like-icon-fill{
     border: none;
     background-color: var(--primary-color);
     font-size: 1.6rem;
+}
+
+/*///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+                                                            // NAVBAR MOBILE + TABLET//
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
+
+.header__navbar-mobile{
+    display: none;
+}
+.block{
+    display: block;
 }
