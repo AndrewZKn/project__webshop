@@ -577,6 +577,7 @@
 .header__mobile-search{
     padding: 0 12px;
     display: none;
+    cursor: pointer;
 }
 .header__mobile-search-icon{
     font-size: 2.6rem;
@@ -833,6 +834,7 @@
     border: none;
     outline: none;
     background: none;
+    cursor: pointer;
 
 }
 .header__search-history-link{
@@ -1528,11 +1530,10 @@ i.home-product-item__like-icon-fill{
 
 }
 .cart__buy-box{
-    display: flex;
-    align-items: center;
+    /* display: flex;
+    align-items: center; */
     width: 100%;
     padding: 0 15px;
-    justify-content: space-between;
 
 }
 .cart__buy-image{

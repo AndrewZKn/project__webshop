@@ -934,17 +934,15 @@
            
     //     `
     //     buyList.appendChild(li)
-
     // })
 
     ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-                                                            // CRUD DATA //
+                                                            // CRUD DATA // U NOT
     ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-    
     var formData = readData()
     insertData(formData)
-    saveData(formData)
+
     function readData(){
         const formData = {}
         formData["title"] = document.querySelector("#title").textContent
@@ -961,59 +959,107 @@
     function insertData(data){
         const li = document.createElement('li')
         li.setAttribute('class', 'cart__buy-item')
-        li.innerHTML += `
-            <div class="cart__buy-box">
-                <div class="cart__buy-image">
-                    <img class="cart__buy-img" src=${data.image} alt="ErrorImage" />
-                </div>
-                <div class="cart__buy-description">
-                    <span class="cart__buy-dsc-span" >Name:${data.title} </span>
-                    <span class="cart__buy-dsc-span" >Brand:${data.brand}</span>
-                </div>
-                <div class='cart__buy-price'>${data.price}</div>
-            </div>
-            <div class="cart__buy-button">
-                <button class="cart__buy-button-btn">-</button>
-                <input type="text" class="cart__buy-input"/>
-                <button class="cart__buy-button-btn">+</button>
-                <button class="cart__buy-button-btn"><i class='cart__buy-button-icon far fa-heart'></i></button>
-                <button class="cart__buy-button-btn" onclick ="deleteData(this)"><i class='cart__buy-button-icon fa-solid fa-trash-can' ></i></button>
-            </div>
-
-        `
+        
+            
+            if(buttonCart){
+                li.innerHTML += `
+                    <div class="cart__buy-box">
+                        <div class="cart__buy-image">
+                            <img class="cart__buy-img" src=${data.image} alt="ErrorImage" />
+                        </div>
+                        <div class="cart__buy-description">
+                            <span class="cart__buy-dsc-span" >Name:${data.title} </span>
+                            <span class="cart__buy-dsc-span" >Brand:${data.brand}</span>
+                        </div>
+                        <div class='cart__buy-price'>${data.price}</div>
+                    </div>
+                    <div class="cart__buy-button">
+                        <button class="cart__buy-button-btn">-</button>
+                        <input type="text" class="cart__buy-input"/>
+                        <button class="cart__buy-button-btn">+</button>
+                        <button class="cart__buy-button-btn"><i class='cart__buy-button-icon far fa-heart'></i></button>
+                        <button class="cart__buy-button-btn" onclick ="deleteData(this)"><i class='cart__buy-button-icon fa-solid fa-trash-can' ></i></button>
+                    </div>
+                `
+            }
+            else{
+                li.innerHTML =''
+            }
 
         buyList.appendChild(li)
     }
     buttonCart.addEventListener('click',insertData)
-    buttonCart.addEventListener('click',saveData())
+    buttonCart.addEventListener('click',saveData)
     // delete
     function deleteData(){
         document.querySelector('.cart__buy-item').remove()
+        deleteDataCart()
+        saveData()
     }
 
     // save
     // bug chưa save được xem lại
     function saveData(){
-        let itemList = document.querySelectorAll('.cart__buy-item')
-        let itemStorage = []
+        const itemList = document.querySelectorAll('.cart__buy-item')
+        const itemStorage = []
+        
         itemList.forEach((item)=>{
             let title = document.querySelector("#title").textContent
             let price = document.querySelector("#price").textContent
             let brand = document.querySelector("#brand").textContent
-            let image = document.querySelector("#image").textContent
+            let image = document.querySelector("#image").src
             itemStorage.push({
                 title,
                 price,
                 brand,
                 image
             })
-            
         })
-        localStorage.setItem('itemList', JSON.stringify(itemStorage))
-        console.log(itemStorage)
-
-        // key :value
+        localStorage.setItem('itemList', JSON.stringify(itemStorage));
     }
-    
+    ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+                                                            // CRUD header__cart-list // U NOT
+    ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+    insertCartList(formData)
+    function insertCartList(data){
+        const ul = document.querySelector('.header__cart-list-item')
+        const li = document.createElement('li')
+        li.setAttribute('class', 'header__cart-item')
+        if(buttonCart){
+            li.innerHTML +=   `
+            <img src=${data.image} alt="ErrorImage" class="header__cart-img">
+            <div class="header__cart-item-info">
+                <div class="header__cart-item-head">
+                    <h5 class="header__cart-item-name">${data.title}</h5>
+                    <div class="header__cart-item-price-wrap">
+                        <span class="header__cart-item-price">${data.price}</span>
+                        <span class="header__cart-item-multiply">x</span>
+                        <span class="header__cart-item-qnt">2</span>
+                    </div>
+                </div>
+                <div class="header__cart-item-body">
+                    <span class="header__cart-item-description">
+                        phân loại: Bạc
+                    </span>
+                    <span class="header__cart-item-remove" onclick = "deleteDataCart(this)">
+                        xóa
+                    </span>
 
-    
+                </div>
+            </div>
+
+        `
+        }
+        else{
+            li.innerHTML = ''
+        }
+       
+        ul.appendChild(li)
+
+    }
+    function deleteDataCart(){
+        document.querySelector('.header__cart-item').remove()
+        deleteData()
+        saveData()
+    }
+
