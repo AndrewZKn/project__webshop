@@ -150,7 +150,7 @@
     text-decoration: none;
 }
 .header__navbar-icon-link:nth-child(2){
-    margin-left:3px ;
+    margin:0 10px ;
 }
 .header__navbar-icon{
     font-size: 1.8rem;
@@ -595,6 +595,9 @@
 .header__logo-link {
     color: transparent;
     text-decoration: none;
+    letter-spacing: 1px;
+    color: var(--white--color);
+    font-size: 1.8rem;
     
 }
 .header__logo-img{
